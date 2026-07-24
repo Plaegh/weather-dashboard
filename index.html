@@ -5,17 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 </head>
 
 <body>
     <nav class="navbar">
-        <a href="">
-            <img class="nav-logo" src="" alt="Logo">
-        </a>
+        <div class="left-nav">
+            <a class="nav-logo">
+                <i class="material-icons">filter_drama</i>
+                <span>Weatheria</span>
+            </a>
 
-        <input class="search-bar" type="search" name="searchbar" id="searchbar" onchange="">
+            <div class="nav-search">
+                <i class="material-icons-outlined search-icon">search</i>
+                <input class="search-bar" type="search" name="searchbar" id="searchbar" onchange="">
+            </div>
+        </div>
+
+        <div class="right-nav">
+            <div class="unit-toggle">
+                <button class="unit-btn active">°C</button>
+                <button class="unit-btn">°F</button>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <button class="nav-btn">
+                        <i class="material-icons-outlined">bedtime</i>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-btn">
+                        <i class="material-icons-outlined">cloud</i>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-btn">
+                        <i class="material-icons-outlined">star</i>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-btn">
+                        <i class="material-icons-outlined">history</i>
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-btn">
+                        <i class="material-icons-outlined">person</i>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
 
 

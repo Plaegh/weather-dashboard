@@ -29,12 +29,12 @@ input {
 /* ===== Base ===== */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Outfit", system-ui, Arial, Helvetica, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     line-height: 1.5;
-    background-color: var(--color-background);
+    background-color: var(--cloudy-color);
 }
 
 img {
@@ -133,19 +133,121 @@ a:focus-visible {
     color: var(--color-text);
 }
 
-.navbar .nav-logo {}
+.navbar .nav-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
 
-.navbar .search-bar {
-    appearance: none;
-    text-decoration: none;
-    padding: 0;
+.navbar .nav-logo i,
+.navbar .nav-logo span {
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    color: var(--color-background);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.left-nav,
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-nav {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+}
+
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    color: var(--color-background);
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    background-color: var(--color-primary-dark);
+}
+
+.nav-btn.active {
+    background-color: var(--color-secondary);
+}
+
+
+.unit-toggle {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    background: var(--color-primary-dark);
+    border-radius: 16px;
+}
+
+.unit-btn {
+    border: none;
+    background: transparent;
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.unit-btn.active {
+    background: var(--color-secondary);
+    color: var(--color-background);
+}
+
+.unit-btn:hover:not(.active) {
+    color: var(--color-background);
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 8px 8px 8px 2.2rem;
+    color: var(--color-background);
+    background-color: var(--color-primary-dark);
+    border: solid 1px var(--color-primary-light);
+    border-radius: 10px;
+}
+
+.search-bar:focus {
+    outline: none;
+    border: solid 1px var(--color-background);
+}
+
+.search-icon {
+    color: var(--color-background);
+    margin: -2rem;
+    z-index: 10;
 }
 
 .container {
     display: flex;
+    margin: 0 auto;
     padding-top: 80px;
-    width: 100%;
-    background-color: var(--cloudy-color);
+    width: 85%;
 }
 
 .weather-card-container {
